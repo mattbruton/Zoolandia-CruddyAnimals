@@ -139,6 +139,10 @@
     <Compile Include="Migrations\201610090017149_InitialCreate.Designer.cs">
       <DependentUpon>201610090017149_InitialCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201610091532414_RemovedInitialModels.cs" />
+    <Compile Include="Migrations\201610091532414_RemovedInitialModels.Designer.cs">
+      <DependentUpon>201610091532414_RemovedInitialModels.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Animal.cs" />
     <Compile Include="Models\Employee.cs" />
@@ -198,6 +202,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201610090017149_InitialCreate.resx">
       <DependentUpon>201610090017149_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610091532414_RemovedInitialModels.resx">
+      <DependentUpon>201610091532414_RemovedInitialModels.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
