@@ -16,10 +16,10 @@ namespace ZoolandiaRazor.Migrations
                         CommonName = c.String(),
                         ScientificName = c.String(),
                         BirthDate = c.DateTime(nullable: false),
-                        CurrentHabitat_HabitatId = c.Int(nullable: false),
+                        CurrentHabitat_HabitatId = c.Int(),
                     })
                 .PrimaryKey(t => t.AnimalId)
-                .ForeignKey("dbo.Habitats", t => t.CurrentHabitat_HabitatId, cascadeDelete: true)
+                .ForeignKey("dbo.Habitats", t => t.CurrentHabitat_HabitatId)
                 .Index(t => t.CurrentHabitat_HabitatId);
             
             CreateTable(
@@ -61,9 +61,9 @@ namespace ZoolandiaRazor.Migrations
         
         public override void Down()
         {
-            DropForeignKey("dbo.Animals", "CurrentHabitat_HabitatId", "dbo.Habitats");
             DropForeignKey("dbo.EmployeeHabitats", "Habitat_HabitatId", "dbo.Habitats");
             DropForeignKey("dbo.EmployeeHabitats", "Employee_EmployeeId", "dbo.Employees");
+            DropForeignKey("dbo.Animals", "CurrentHabitat_HabitatId", "dbo.Habitats");
             DropIndex("dbo.EmployeeHabitats", new[] { "Habitat_HabitatId" });
             DropIndex("dbo.EmployeeHabitats", new[] { "Employee_EmployeeId" });
             DropIndex("dbo.Animals", new[] { "CurrentHabitat_HabitatId" });

@@ -135,6 +135,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="Migrations\201610090017149_InitialCreate.cs" />
     <Compile Include="Migrations\201610090017149_InitialCreate.Designer.cs">
       <DependentUpon>201610090017149_InitialCreate.cs</DependentUpon>
@@ -142,6 +143,11 @@
     <Compile Include="Migrations\201610102204442_InitialCreate1.cs" />
     <Compile Include="Migrations\201610102204442_InitialCreate1.Designer.cs">
       <DependentUpon>201610102204442_InitialCreate1.cs</DependentUpon>
+=======
+    <Compile Include="Migrations\201610120037211_InitialCreate.cs" />
+    <Compile Include="Migrations\201610120037211_InitialCreate.Designer.cs">
+      <DependentUpon>201610120037211_InitialCreate.cs</DependentUpon>
+>>>>>>> master
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Animal.cs" />
@@ -201,11 +207,16 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <EmbeddedResource Include="Migrations\201610090017149_InitialCreate.resx">
       <DependentUpon>201610090017149_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201610102204442_InitialCreate1.resx">
       <DependentUpon>201610102204442_InitialCreate1.cs</DependentUpon>
+=======
+    <EmbeddedResource Include="Migrations\201610120037211_InitialCreate.resx">
+      <DependentUpon>201610120037211_InitialCreate.cs</DependentUpon>
+>>>>>>> master
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
