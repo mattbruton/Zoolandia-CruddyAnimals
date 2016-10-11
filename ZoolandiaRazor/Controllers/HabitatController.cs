@@ -13,12 +13,16 @@ namespace ZoolandiaRazor.Controllers
         // GET: Habitat
         public ActionResult Index()
         {
-            Dictionary<string, int> animalCount = new Dictionary<string, int>();
             ZooRepository repo = new ZooRepository();
-            //animalCount = repo.AnimalsInEachHabitat();
-            //ViewBag.message = "Dog";
-            ViewBag.animalCount = repo.AnimalsInEachHabitat();
+            ViewBag.animalCount = repo.AnimalCountInEachHabitat();
             return View();
+        }
+
+        public ActionResult Details(int id)
+        {
+            ZooRepository repo = new ZooRepository();
+            var habitatDetail = repo.habitatTable(id);
+            return View(habitatDetail);
         }
     }
 }

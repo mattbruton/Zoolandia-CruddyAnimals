@@ -15,7 +15,7 @@ namespace ZoolandiaRazor.Models
         [Required]
         public string LastName { get; set; }
         public DateTime BirthDate { get; set; }
-        public List<Habitat> AssignedHabitats { get; set; }
+        public virtual List<Habitat> AssignedHabitats { get; set; }
         public bool IsLicensedGorillaHandler { get; set; }
     }
 }

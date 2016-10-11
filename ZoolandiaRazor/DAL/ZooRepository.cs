@@ -22,7 +22,7 @@ namespace ZoolandiaRazor.DAL
          Sylvia's Section Beginning
         */
         //return Habitat name and animal counts
-        public Dictionary<string, int> AnimalsInEachHabitat()
+        public Dictionary<string, int> AnimalCountInEachHabitat()
         {
             var returnList = Context.Animals.GroupBy(a => a.CurrentHabitat).Select(
                 n => new
@@ -40,11 +40,47 @@ namespace ZoolandiaRazor.DAL
             return dic;
         }
 
-        //return how many animals in each habitat
+        //return AnimalList for each Habitat
+        public Dictionary<string, List<Animal>> AnimalListBasedOnHabitatName()
+        {
+            var animalList1= Context.Animals.GroupBy(a => a.CurrentHabitat).Select(
+                grp => new
+                {
+                    HabitatName = grp.Key.HabitatName,
+                    animalList = grp.ToList()
+                });
 
-        //return list of animals
+            Dictionary<string, List<Animal>> dic = new Dictionary<string, List<Animal>>();
+            foreach (var record in animalList1)
+            {
+                dic.Add(record.HabitatName, record.animalList);
+            }
 
-        //return list of employee
+            return dic;
+        }
+
+        //return EmployeeList for each Habitat
+        //public Dictionary<string, List<Employee>> EmployeeListBasedOnHabitatName()
+        //{
+        //    var ctx = Context
+
+        //}
+
+        //return HabitatTable
+        public Habitat habitatTable(int id)
+        {
+            //try
+            //{
+                var ctx = Context.Habitats.FirstOrDefault(h => h.HabitatId == id);
+                return ctx;
+            //}
+            //catch()
+            //{
+            //    return Context.Habitats.FirstOrDefault(h => h.HabitatId == 1);
+            //}
+            
+        }
+        
 
         /* 
         Sylvia's Section End
