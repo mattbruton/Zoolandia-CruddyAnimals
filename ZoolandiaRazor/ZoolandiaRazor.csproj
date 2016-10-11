@@ -139,11 +139,9 @@
     <Compile Include="Migrations\201610090017149_InitialCreate.Designer.cs">
       <DependentUpon>201610090017149_InitialCreate.cs</DependentUpon>
     </Compile>
-
     <Compile Include="Migrations\201610102204442_InitialCreate1.cs" />
     <Compile Include="Migrations\201610102204442_InitialCreate1.Designer.cs">
       <DependentUpon>201610102204442_InitialCreate1.cs</DependentUpon>
-
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Animal.cs" />
@@ -186,12 +184,12 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Habitat\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\Animal\" />
     <Folder Include="Views\Employee\" />
-    <Folder Include="Views\Habitat\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -205,10 +203,8 @@
     <EmbeddedResource Include="Migrations\201610090017149_InitialCreate.resx">
       <DependentUpon>201610090017149_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
-
     <EmbeddedResource Include="Migrations\201610102204442_InitialCreate1.resx">
       <DependentUpon>201610102204442_InitialCreate1.cs</DependentUpon>
-
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
