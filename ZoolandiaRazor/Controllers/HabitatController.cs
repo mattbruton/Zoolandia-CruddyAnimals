@@ -21,8 +21,8 @@ namespace ZoolandiaRazor.Controllers
         public ActionResult Details(int id)
         {
             ZooRepository repo = new ZooRepository();
-            var habitatDetail = repo.habitatTable(id);
-            return View(habitatDetail);
+            ViewBag.habitatDetail = repo.habitatTable(id);
+            return View();
         }
     }
 }
