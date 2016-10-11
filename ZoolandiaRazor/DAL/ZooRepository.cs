@@ -17,5 +17,29 @@ namespace ZoolandiaRazor.DAL
         {
             Context = _context;
         }
+
+        /* 
+         Sylvia's Section Beginning
+        */
+
+        /* 
+        Sylvia's Section End
+        */
+
+        /* 
+        Odi's Section Beginning
+        */
+
+        /* 
+        Odi's Section End
+        */
+
+        /* 
+        Matt's Section Beginning
+        */
+
+        /* 
+        Matt's Section End
+        */
     }
 }

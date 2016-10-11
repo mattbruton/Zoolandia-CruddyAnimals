@@ -1,0 +1,14 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<ul>
+    @{foreach (var e in ViewBag.Employees)
+        {
+            <li class="list-group-item">@e.FirstName @e.LastName</li>
+        }
+    }
+</ul>
