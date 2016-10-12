@@ -13,7 +13,7 @@ namespace ZoolandiaRazor.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201610102122126_InitialCreate"; }
+            get { return "201610120037211_InitialCreate"; }
         }
         
         string IMigrationMetadata.Source
