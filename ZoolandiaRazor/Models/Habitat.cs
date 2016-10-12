@@ -18,7 +18,7 @@ namespace ZoolandiaRazor.Models
         public string HabitatName { get; set; }
 
         public string HabitatType { get; set; }
-        public List<Animal> AnimalList { get; set; }
-        public List<Employee> EmployeeList { get; set; }
+        public virtual List<Animal> AnimalList { get; set; }
+        public virtual List<Employee> EmployeeList { get; set; }
     }
 }
