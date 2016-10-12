@@ -22,7 +22,6 @@ namespace ZoolandiaRazor.DAL
          Sylvia's Section Beginning
         */
         //return Habitat name and animal counts. 
-
         public Dictionary<string, int> AnimalCountInEachHabitat()
         {
             var returnList = Context.Animals.GroupBy(a => a.CurrentHabitat).Select(
@@ -40,15 +39,8 @@ namespace ZoolandiaRazor.DAL
 
             return dic;
         }
-
-
-
-        //return HabitatIndex
-        //public List<Habitat> habitatIndex()
-        //{
-        //    return Context.Habitats.ToList();
-        //}
         
+
 
         //return HabitatTable
         public Habitat habitatTable(int id)
@@ -63,6 +55,12 @@ namespace ZoolandiaRazor.DAL
             //    return Context.Habitats.FirstOrDefault(h => h.HabitatId == 1);
             //}
             
+        }
+
+        public void AddHabitat(Habitat habitat)
+        {
+            Context.Habitats.Add(habitat);
+            Context.SaveChanges();
         }
         
 

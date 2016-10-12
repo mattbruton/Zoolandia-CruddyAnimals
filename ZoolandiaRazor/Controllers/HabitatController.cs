@@ -31,5 +31,17 @@ namespace ZoolandiaRazor.Controllers
         {
             return View();
         }
+
+        [HttpPost]
+        public ActionResult Create(Habitat habitat)
+        {
+            if(ModelState.IsValid)
+            {
+                repo.AddHabitat(habitat);
+                return RedirectToAction("Index");
+            }
+
+            return View(habitat);
+        }
     }
 }
