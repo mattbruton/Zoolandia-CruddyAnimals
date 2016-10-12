@@ -10,18 +10,25 @@ namespace ZoolandiaRazor.Controllers
 {
     public class HabitatController : Controller
     {
+        ZooRepository repo = new ZooRepository();
+        
+
         // GET: Habitat
         public ActionResult Index()
         {
-            ZooRepository repo = new ZooRepository();
             ViewBag.animalCount = repo.AnimalCountInEachHabitat();
             return View();
         }
 
         public ActionResult Details(int id)
         {
-            ZooRepository repo = new ZooRepository();
             ViewBag.habitatDetail = repo.habitatTable(id);
+            return View();
+        }
+
+        [HttpGet]
+        public ActionResult Create()
+        {
             return View();
         }
     }

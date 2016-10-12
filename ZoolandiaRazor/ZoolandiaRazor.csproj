@@ -135,11 +135,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-
     <Compile Include="Migrations\201610120037211_InitialCreate.cs" />
     <Compile Include="Migrations\201610120037211_InitialCreate.Designer.cs">
       <DependentUpon>201610120037211_InitialCreate.cs</DependentUpon>
-
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Animal.cs" />
@@ -182,6 +180,7 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Habitat\Index.cshtml" />
     <Content Include="Views\Habitat\Details.cshtml" />
+    <Content Include="Views\Habitat\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -197,10 +196,8 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-
     <EmbeddedResource Include="Migrations\201610120037211_InitialCreate.resx">
       <DependentUpon>201610120037211_InitialCreate.cs</DependentUpon>
-
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

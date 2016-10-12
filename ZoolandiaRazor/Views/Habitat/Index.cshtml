@@ -3,14 +3,18 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
 <h2>Habitat & Animals count in each Habitat</h2>
-<ul>
-    
-    @foreach(var record in ViewBag.animalCount)
-    {
-        <li>@record.Key: @record.Value</li>
-    }
-</ul>
+<div>
+    <ul>
 
+        @foreach (var record in ViewBag.animalCount)
+        {
+            <li>@record.Key: @record.Value</li>
+        }
+    </ul>
+</div>
+
+<div>
+    <p><a class="btn btn-default" href="/Habitat/Create/">Create New Habitat</a></p>
+</div>
 
