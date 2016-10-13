@@ -135,13 +135,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201610090017149_InitialCreate.cs" />
-    <Compile Include="Migrations\201610090017149_InitialCreate.Designer.cs">
-      <DependentUpon>201610090017149_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201610102204442_InitialCreate1.cs" />
-    <Compile Include="Migrations\201610102204442_InitialCreate1.Designer.cs">
-      <DependentUpon>201610102204442_InitialCreate1.cs</DependentUpon>
+    <Compile Include="Migrations\201610120037211_InitialCreate.cs" />
+    <Compile Include="Migrations\201610120037211_InitialCreate.Designer.cs">
+      <DependentUpon>201610120037211_InitialCreate.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Animal.cs" />
@@ -178,19 +174,28 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="Views\Web.config" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Animal\TheAnimals.cshtml" />
-    <Content Include="Views\Animal\AnimalDetails.cshtml" />
+
+    <Content Include="Views\Habitat\Index.cshtml" />
+    <Content Include="Views\Habitat\Details.cshtml" />
+    <Content Include="Views\Habitat\Create.cshtml" />
+    <Content Include="Views\Habitat\Update.cshtml" />
+
+    <Content Include="Views\Employee\Index.cshtml" />
+    <Content Include="Views\Employee\Detail.cshtml" />
+
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Animal\" />
+
     <Folder Include="Views\Employee\" />
+
     <Folder Include="Views\Habitat\" />
+
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -201,11 +206,8 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201610090017149_InitialCreate.resx">
-      <DependentUpon>201610090017149_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201610102204442_InitialCreate1.resx">
-      <DependentUpon>201610102204442_InitialCreate1.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201610120037211_InitialCreate.resx">
+      <DependentUpon>201610120037211_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

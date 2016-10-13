@@ -1,14 +1,13 @@
-﻿
-@{
-    ViewBag.Title = "Index";
+﻿@{
+    ViewBag.Title = "Zoo Employees";
 }
-
-<h2>Index</h2>
-
+<h2>Zoo Employees</h2>
 <ul>
     @{foreach (var e in ViewBag.Employees)
         {
-            <li class="list-group-item">@e.FirstName @e.LastName</li>
+            <li class="list-group-item">
+                <a href="@Url.Action("Detail", "Employee", new { id = e.EmployeeId })">@e.FirstName @e.LastName</a>
+            </li>
         }
     }
 </ul>

@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<p>Habitat Name: @ViewBag.habitatDetail.HabitatName</p>
+<p>Habitat Type: @ViewBag.habitatDetail.HabitatType</p>
+<p>Animal List: 
+    <ul>
+        @foreach (var a in ViewBag.habitatDetail.AnimalList)
+        {
+            <li>@a.Name</li>
+        }
+    </ul>
+</p>
+<p>Employee List: 
+    <ul>
+        @foreach (var e in ViewBag.habitatDetail.EmployeeList)
+        {
+            <li>@e.FirstName @e.LastName </li>
+        }
+    </ul>
+</p>
+
+<div>
+    <a class="btn btn-default" href="/Habitat/Update">Update Habitat</a>
+    <a class="btn btn-default" href="/Habitat/Delete">Delete Habitat</a>
+</div>
+
+
+
+
+
