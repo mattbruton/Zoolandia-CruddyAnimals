@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Data.Entity;
 
+
 namespace ZoolandiaRazor.DAL
 {
     public class ZooRepository
@@ -86,6 +87,21 @@ namespace ZoolandiaRazor.DAL
         /* 
         Odi's Section Beginning
         */
+            //Method for Getting Animals
+             public List<Animal> GetAnimals()
+             {
+                return Context.Animals.ToList();
+             }
+            
+             //Method for Getting Animals by Name
+             public Animal GetAnimals(string name)
+               {
+            //Get all of the animals in the list and return the value of the anmial that matches the string name that the user commands.
+
+            Animal found_animal = Context.Animals.FirstOrDefault(animals => animals.Name.ToLower() == name.ToLower());
+
+            return found_animal;
+        }
 
         /* 
         Odi's Section End
