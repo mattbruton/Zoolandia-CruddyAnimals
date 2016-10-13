@@ -1,0 +1,18 @@
+﻿@{
+    ViewBag.Title = string.Format("{0} {1}", ViewBag.Employee.FirstName, ViewBag.Employee.LastName);
+}
+<h1>@ViewBag.Title</h1>
+<p>Full Name: @ViewBag.Employee.FirstName @ViewBag.Employee.LastName</p>
+<p>Age: @ViewBag.Age</p>
+<p>
+    Assigned Habitats:
+    @{ foreach (var habitat in ViewBag.Habitats)
+        {
+            <ul>
+                <li>
+                    <span>@habitat.HabitatName</span>
+                </li>
+            </ul>
+        }
+    }
+</p>
