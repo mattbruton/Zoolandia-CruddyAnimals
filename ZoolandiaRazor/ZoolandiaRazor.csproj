@@ -178,15 +178,24 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
+
     <Content Include="Views\Habitat\Index.cshtml" />
     <Content Include="Views\Habitat\Details.cshtml" />
     <Content Include="Views\Habitat\Create.cshtml" />
     <Content Include="Views\Habitat\Update.cshtml" />
+
+    <Content Include="Views\Employee\Index.cshtml" />
+    <Content Include="Views\Employee\Detail.cshtml" />
+
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\Animal\" />
+
     <Folder Include="Views\Employee\" />
+
+    <Folder Include="Views\Habitat\" />
+
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

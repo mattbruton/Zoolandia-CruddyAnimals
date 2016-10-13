@@ -95,6 +95,17 @@ namespace ZoolandiaRazor.DAL
         Matt's Section Beginning
         */
 
+        public List<Employee> GetAllEmployees()
+        {
+            return Context.Employees.ToList();
+        }
+
+        public Employee GetSingleEmployee(int empId)
+        {
+            Employee selected_employee = Context.Employees.FirstOrDefault(e => e.EmployeeId == empId);
+            return selected_employee;
+        }
+
         /* 
         Matt's Section End
         */
