@@ -5,13 +5,23 @@
 
 <h2>Habitat & Animals count in each Habitat</h2>
 <div>
+    @if (ViewBag.animalCount.Count == 0)
+    {
+        <p>No Habitat Found!</p>
+    }
+    else
+    {
     <ul>
 
         @foreach (var record in ViewBag.animalCount)
         {
-            <li>@record.Key: @record.Value</li>
+            //this is for the dictionary method I came up with before.
+            @*<li>@record.Key: @record.Value</li>*@
+
+            <li>@record.HabitatName: @record.AnimalList.Count</li>
         }
     </ul>
+    }
 </div>
 
 <div>

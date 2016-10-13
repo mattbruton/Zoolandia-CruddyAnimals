@@ -16,13 +16,13 @@ namespace ZoolandiaRazor.Controllers
         // GET: Habitat
         public ActionResult Index()
         {
-            ViewBag.animalCount = repo.AnimalCountInEachHabitat();
+            ViewBag.animalCount = repo.GetAllHabitats();
             return View();
         }
 
         public ActionResult Details(int id)
         {
-            ViewBag.habitatDetail = repo.habitatTable(id);
+            ViewBag.habitatDetail = repo.IndividualHabitat(id);
             return View();
         }
 
@@ -42,6 +42,21 @@ namespace ZoolandiaRazor.Controllers
             }
 
             return View(habitat);
+        }
+
+        
+        public ActionResult Update(int id)
+        {
+            return View();
+        }
+
+        [HttpPut]
+        [ValidateAntiForgeryToken]
+        public ActionResult Update(Habitat habitat)
+        {
+            repo.UpdateHabitat(habitat);
+            return RedirectToAction("Detail");
+            return View();
         }
     }
 }

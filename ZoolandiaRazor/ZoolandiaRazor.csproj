@@ -181,6 +181,7 @@
     <Content Include="Views\Habitat\Index.cshtml" />
     <Content Include="Views\Habitat\Details.cshtml" />
     <Content Include="Views\Habitat\Create.cshtml" />
+    <Content Include="Views\Habitat\Update.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
